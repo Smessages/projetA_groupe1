@@ -1,44 +1,44 @@
-Projet de DevOps avec Linux, Bash/Python, vagrant, virtualbox
+# Projet de DevOps avec Linux, Bash/Python, vagrant, virtualbox
 
-Objectif général du projet
-Déploiement de l'application WORDPRESS dans un environement linux 
-Le but de ce projet est de vous familiariser avec l'administration système, l'automatisation, 
-la mise en œuvre de la tolérance de charge et la gestion de la sécurité dans un environnement Linux
+## Objectif général du projet
+### Déploiement de l'application WORDPRESS dans un environement linux 
+### Le but de ce projet est de vous familiariser avec l'administration système, l'automatisation, 
+### la mise en œuvre de la tolérance de charge et la gestion de la sécurité dans un environnement Linux
 
-Cette application est constituée d'une partie Front-end(IHM), et d'une partie Back-end principalement une base de données MySQL pour ce pojet.
+####  Cette application est constituée d'une partie Front-end(IHM), et d'une partie Back-end principalement une base de données MySQL pour ce pojet.
 
 
 ![image](https://github.com/Smessages/projetA_groupe1/assets/23023422/5455f4d8-8b91-4b0c-ab71-42ca930bdcdc)
 
-Prérequis du projet:
+## Prérequis du projet:
 
-commande de ligne linux
+#### commande de ligne linux
 
-VirtualBox pour créer l'environement linux , Boxes Centos ou ubuntu
+#### VirtualBox pour créer l'environement linux , Boxes Centos ou ubuntu
 
-Vagrant pour l'automatisation des tâches
+#### Vagrant pour l'automatisation des tâches
 
-Bash Script, PHP >= 7.4 
+#### Bash Script, PHP >= 7.4 
 
-application: Wordpress
+#### application: Wordpress
 
-DataBase: MySQL >= 5.7
+#### DataBase: MySQL >= 5.7
 
-outils openource: HaProxy, OpenSSl
+#### outils openource: HaProxy
 
-* Automatisation l'installation
+## Automatisation l'installation
 
-*le fichier install_tools.sh permet le déploiement de toute l'infrastructure.
+#### le fichier install_tools.sh permet le déploiement de toute l'infrastructure.
 
--Nous utilisons l'outil Vagrant installer sur notre machine window, pour automatiser le déploiement des serveurs linux , le Vagrantfile 
-permettra de lancer dans un premier les trois serveurs et dans un second temps nous utilserons toujours vagrant pour lancer le script install_tools pour 
-configurer chaque server en fonction du role qu'aura chaque machine comme l'indique le shéma d'architecture.
+#### Nous utilisons l'outil Vagrant installer sur notre machine window, pour automatiser le déploiement des serveurs linux , le Vagrantfile 
+#### permettra de lancer dans un premier temps les trois serveurs et dans un second temps nous utilserons toujours l'outil vagrant pour lancer le script install_tools pour 
+#### configurer chaque server en fonction du role qu'aura chaque machine comme l'indique le shéma d'architecture.
 
--une (1) machine qui fait la repartion de charge et reverse proxy sur laquelle nous allons installer et configurer l'aplication HAproxy
+#### une (1) machine serveur HAproxy qui fait la repartion de charge et reverse proxy sur laquelle nous allons installer et configurer l'aplication HAproxy
 
--deux serveurs wordpress  derières le serveur proxy sur lesquels seront répartis les requêtes clients.
+#### deux machines serveurs wordpress  derières le serveur proxy sur lesquels seront répartis les requêtes clients.
 
-Comment fonctionne les scripts?
+### Comment fonctionne les scripts?
 
 Grâce à l'outil vagrant et à sa fonction provisioning, nous pouvons automatiser des process qui sont repètitif comme le déploiement des instances linux de notre
 
